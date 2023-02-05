@@ -1,56 +1,105 @@
 ---
-title: Get started with Markdoc
-description: How to get started with Markdoc
+lang: en-US
+title: Getting Started
+description: Text and Video tutorials on how to use Open Registry
 ---
 
-# {% $markdoc.frontmatter.title %}
+# Getting Started
 
-Follow the instructions below to install Markdoc in your app. Or check out our [integration guide](/docs/nextjs) to help you build a documentation site. 
+Working with OpenRegistry is no different than working with any other container registry.
+We'd love for you to try and use OpenRegistry and provide feedback.
+Following are the steps to get started:
 
-## Install Markdoc
+### Sign-up
 
-Install the Markdoc library:
+The sign-up process is essential as `Pushing` to container repositories is a restricted operation and requires proper authorization.
+You can still browse through and `pull` container images on OpenRegistry if you do not wish to sign-up :) .
+Once you sign-up, you'll receive an Email verification link which is essential to activate your account.
 
-```shell
-npm install @markdoc/markdoc
+### Sign-In
+
+Once Signed-up and with your email verified, you should be directed to OpeRegistry logged in and thus enabling you to
+unleash the power of `Pushing` container images
+
+In addition to the above method, you can also choose to sign-in with Github which is literally the shortest and easiest
+way to connect with OpenRegistry
+
+[signin/signup]: 
+### Using docker CLI:
+
+Now comes a very tiny part which might feel a bit tricky. If you have signed-up with email and normal flow,
+you can use the same username and password for Docker Login.
+However, with Github you'll have to generate a PAT (Personal Access Token) which will serve as your password for Docker
+Login. Don't be spooked by it, it's super simple. Just follow this guide for  
+[Github PATs](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+and you should be sorted. If you still find it difficult, we're here to help so just Hit Us Up!! 👍🏻
+
+**To summarise**:
+
+- for normal auth flow (through sign-up/sign-in)
+
+```bash
+docker login openregistry.dev
+Username: janedoe
+Password: <Password you used to sign-up>
 ```
 
-or
+- for Github flow (Sign-in with Github)
 
-```shell
-yarn add @markdoc/markdoc
+```bash
+docker login openregistry.dev
+Username: janedoe
+Password: <PAT from Github>
 ```
 
-## Import Markdoc
+### Push an Image
 
-Import the Markdoc library in your app:
+By default with `docker push` the images are pushed to DockerHub.
+For Pushing images to OpenRegistry instead, the image must be tagged first:
 
-```js
-const Markdoc = require('@markdoc/markdoc');
+- Add "openregistry.dev" prefix to every image that has to go to OpenRegistry
+- Prefix the image name with your username (or Github Username when you sign-up with Github)
+- For example, you have an **alpine:latest** image that you wish to push to OpeRegistry, use the following to tag the image:
+-
+
+```bash
+docker tag <image-name>:<tag> openregistry.dev/<username>/<image-name>:<tag>
 ```
 
-If you're using ESM:
+so for user: **janedoe** and image: **alpine:latest**, the command will be
 
-```js
-import Markdoc from '@markdoc/markdoc';
+```bash
+docker tag alpine:latest openregistry.dev/janedoe/alpine:latest
 ```
 
-## Use Markdoc
+Pushing the image works the same way as docker
 
-Call the `parse`, `transform` and `render` Markdoc functions to render your content.
+```bash
+docker push openregistry.dev/janedoe/alpine:latest
+```
 
-```js
-const source = '# Markdoc';
+### Pull an Image
 
-const ast = Markdoc.parse(source);
-{% comment %}
-// prettier-ignore
-{% /comment %}
-const content = Markdoc.transform(ast, /* [config](/docs/config) */);
+For pull Operations, all you have to do is copy the docker pull command for any image
+from OpenRegistry and run it as it is in your terminal.<br>
+To pull the above image from OpenRegistry:
 
-const html = Markdoc.renderers.html(content);
+```bash
+docker pull openregistry.dev/janedoe/alpine:latest
+```
+
+### How to Run this project locally
+
+OpenRegistry is not Go Gettable right now because of a dependency issue with Go-Skynet.
+To build this project locally, please use the following method:
+
+```bash
+git clone https://github.com/containerish/OpenRegistry.git
+make mod-fix
+go build
 ```
 
 ## Next steps
 
-- [Learn Markdoc syntax](/docs/syntax)
+- [Install Markdoc](/docs/getting-started)
+- [Try it out online](/sandbox)

@@ -21,19 +21,10 @@ import 'codemirror/lib/codemirror.css';
 
 import '../public/globals.css';
 
-const TITLE = 'Markdoc';
-const DESCRIPTION = 'A powerful, flexible, Markdown-based authoring framework';
+const TITLE = 'OpenRegistry';
+const DESCRIPTION = 'A decentralised, open source and reliable container registry';
 const MARKDOC = `
-
-
-  ███    ███  █████  ██████  ██   ██ ██████   ██████   ██████
-  ████  ████ ██   ██ ██   ██ ██  ██  ██   ██ ██    ██ ██
-  ██ ████ ██ ███████ ██████  █████   ██   ██ ██    ██ ██
-  ██  ██  ██ ██   ██ ██   ██ ██  ██  ██   ██ ██    ██ ██
-  ██      ██ ██   ██ ██   ██ ██   ██ ██████   ██████   ██████
-
-
-
+Openregistry Documentaion
 `;
 
 const FONTS_BASE_URL = process.env.NEXT_PUBLIC_FONTS_BASE_URL || '/fonts';
@@ -141,14 +132,8 @@ export default function MyApp(props) {
       </a>
       <TopNav>
         <Link href="/docs/getting-started">Docs</Link>
-        <Link href="https://github.com/markdoc/markdoc">GitHub</Link>
-        <Link href="https://github.com/markdoc/markdoc/discussions">
-          Community
-        </Link>
-        <Link href="https://twitter.com/StripeDev">Twitter</Link>
-        <span className="primary no-mobile">
-          <Link href="/sandbox">Try</Link>
-        </span>
+        <Link href="https://github.com/containerish/openregistry">GitHub</Link>
+        <Link href="https://twitter.com/containerish">Twitter</Link>
       </TopNav>
       <div className="page">
         {isDocs ? <SideNav /> : null}
@@ -161,11 +146,11 @@ export default function MyApp(props) {
       <div className="footer-bar">
         <Footer landing={isLandingPage}>
           <Link href="/docs/getting-started">Docs</Link>
-          <Link href="https://github.com/markdoc/markdoc">GitHub</Link>
-          <Link href="https://github.com/markdoc/markdoc/discussions">
-            Community
+          <Link href="https://github.com/containerish/openregistry">GitHub</Link>
+          <Link href="https://discord.gg/nrYx9UHF">
+            Discord
           </Link>
-          <Link href="https://twitter.com/StripeDev">Twitter</Link>
+          <Link href="https://twitter.com/containerish">Twitter</Link>
         </Footer>
       </div>
       <style jsx global>
@@ -282,7 +267,7 @@ export default function MyApp(props) {
           }
 
           .page--landing .nav-bar nav {
-            border-bottom: none;
+            border-bottom: 1px solid var(--primary100);
           }
           .page--landing .hero {
             border-top: 1px solid var(--dark);
@@ -311,9 +296,20 @@ export default function MyApp(props) {
             padding: 4rem 0 6rem;
           }
 
+          .page--landing .zines {
+            background: var(--purple) ;
+            border: 3px solid #000000;
+          }
+
+          .page--landing .img {
+            width: 600px;
+            
+          }
+
           .page--landing .get-started {
-            background: var(--theme);
+            background: var(--pale);
             padding: 115px 0 120px;
+            border: 3px solid #000000;
           }
 
           .page--landing .get-started .left ::selection {
@@ -337,7 +333,8 @@ export default function MyApp(props) {
           }
 
           .page--landing .value-props {
-            padding-top: 0px;
+            padding-top: 90px;
+            padding-bottom: 90px;
           }
 
           .page--landing .by-stripe {
@@ -474,7 +471,6 @@ export default function MyApp(props) {
             }
 
             .page--landing table td {
-              /* https://stackoverflow.com/questions/23556364/how-to-convert-columns-to-rows-using-css */
               display: block;
               gap: 8px;
             }

@@ -1,22 +1,34 @@
 ---
-title: A powerful, flexible, Markdown-based authoring framework
-description: From personal blogs to massive documentation sites, Markdoc is a content authoring system that grows with you.
+title: A decentralised and open source container registry
 ---
 
 {% section .hero %}
 
 {% typewriter /%}
 
-> From personal blogs to massive documentation sites, Markdoc is a content authoring system that grows with you.
+> OpenRegistry is an open source and decentralised container registry. Powered by Web3 community, we have been able to build
+> project you can rely on.
 
 [View docs](/docs/getting-started) {% .primary %}
 
 {% /section %}
 
-{% section .try .no-mobile %}
+{% section .zines %}
+{% side-by-side .hero %}
 
-{% sandbox height="630px" options={"scrollbarStyle": null} /%}
+{% item %}
 
+### Hello there!{% .jumbo %}
+
+> Are you new to OpenRegistry or Container registries in general?
+> Do you want to learn more about containers and container registries before proceeding with the documentaion?
+
+> We have the perfect starter documentation with cute little zines check them out
+> [here]()
+
+{% /item %}
+![Images](/images/zine-docs.svg) {% .img %}
+{% /side-by-side %}
 {% /section %}
 
 {% section .value-props %}
@@ -25,32 +37,36 @@ description: From personal blogs to massive documentation sites, Markdoc is a co
 
 ---
 
-- {% ascii "key" /%}
+- {% ascii "door" /%}
 
   {% item %}
 
   ### Open source {% .jumbo %}
 
-  Maintain full control over your code and content. Markdoc is open-source and fully extensible.
+  OpenRegistry is fully open source. Our codebase is public and uses MIT license.
+  We are driven by open source community and this is our effort towards giving back.
   {% /item %}
 
-- {% ascii "pencil" /%}
+- {% ascii "distributed" /%}
 
   {% item %}
 
-  ### Developer & writer friendly {% .jumbo %}
+  ### Decentralised {% .jumbo %}
 
-  Markdoc delivers a powerful, flexible, developer experience (DX) with an equally capable authoring experience (AX).
+  One of the most appealing feature of OpenRegistry is it's decentralised nature,
+  and our collaborations with various Web3 projects like Akash, IPFS, Filebae, Storj and iExec
+  are what make it possible.
 
   {% /item %}
 
-- {% ascii "card" /%}
+- {% ascii "globe" /%}
 
   {% item %}
 
-  ### Adopt anywhere {% .jumbo %}
+  ### Reliable and Available {% .jumbo %}
 
-  Use Markdoc to create interactive documentation experiences, static content sites, authoring tooling, and more.
+  OpenRegistry is built on the foundation of OSS and Web3 communities. Our promise is to keep our system transparent while maintaining
+  the best of our performance.
 
   {% /item %}
 
@@ -64,33 +80,27 @@ description: From personal blogs to massive documentation sites, Markdoc is a co
 
 {% item %}
 
-## Get started quickly {% .jumbo %}
+## Get started {% .jumbo %}
 
-[Markdoc core](https://github.com/markdoc/markdoc) is a lightweight package containing everything you need to get started. If you want to get going even faster, check out our [Next.js plugin](https://github.com/markdoc/next.js) and deploy a Markdoc documentation site with zero boilerplate.
+Its super easy to get started with OpenRegistry. OpenRegistry is compliant with OCI confromance specification,
+which means the functionality and using CLI with OpenRegistry is just like any other container registry
 
 [Explore documentation](/docs/getting-started) {% .primary %}
 
-[Live edit]() {% .primary %} {% .live-edit %}
-
 {% /item %}
 
-```shell
-npm install @markdoc/markdoc
-```
+```bash
+janedoe:-$ docker login openregidstry.dev
 
-```js
-import Markdoc from '@markdoc/markdoc';
+ username: janedoe
 
-const doc = `
-# Hello world.
-> My first Markdoc page
-`;
+ password: ******
 
-const ast = Markdoc.parse(doc);
+Login Suceeded
 
-const content = Markdoc.transform(ast);
+janedoe:-$ docker tag alpine:latest openregistry.dev/janedoe/alpine:latest
 
-const html = Markdoc.renderers.html(content);
+janedoe:-$ docker push openregistry.dev/janedoe/alpine:latest
 ```
 
 {% /side-by-side %}
@@ -101,34 +111,13 @@ const html = Markdoc.renderers.html(content);
 
 {% side-by-side %}
 
-### Markdoc powers Stripe documentation {% .jumbo %}
+### A Humble Note {% .jumbo %}
 
-Stripe created Markdoc to power its largest and [most detailed content site](https://stripe.com/docs). Since then, we have adopted it across the company, writing hundreds of thousands of lines of Markdoc to create thousands of pages of expressive, custom documentation.
+OpneRegistry is built and maintained by 2 developers. We are learning everyday and doing our best to make OpenRegistry the best container registry out there and
+we need your support in accomplishing it. If you spot a bug, typo or any other inconsistency across the platform and documentation,
+please report it in our [github discussion](https://github.com/containerish/OpenRegistry/discussions/137) or write to @team.openregistry.dev.
+We welcome cunstructive criticism too, as it will help us become better. So don't hold back in any case. Lastly, thanks a lot for visiting, we hope you find this documentation informative.
 
 {% /side-by-side %}
-
----
-
-{% features %}
-
-- **Familiar syntax**
-
-  Markdoc is a syntactic extension of [Markdown](https://commonmark.org/), so you can keep using all the syntax and tooling you are used to.
-
-  [Learn the syntax](/docs/syntax) {% .primary %}
-
-- **Easily extensible**
-
-  Markdoc lets you customize all aspects of the system, from [custom tags](/docs/tags) and [nodes](/docs/nodes) to entirely [new renderers](/docs/render).
-
-  [Learn more](/docs/render) {% .primary %}
-
-- **Built-in validation**
-
-  You can add custom validation throughout your content system, ensuring nothing breaks and your content remains consistent.
-
-  [Learn more](/docs/validation) {% .primary %}
-
-{% /features %}
 
 {% /section %}

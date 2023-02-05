@@ -97,7 +97,8 @@ export function Typewriter() {
     <h1 className="jumbo" aria-label={text}>
       <span className="prefers-no-animation">{text}</span>
       <span aria-hidden="true" className="prefers-animation">
-        <Swapper before="# Markdoc" after="Markdoc is" onEnd={next} />
+      <Type text=" Welcome to our Documentation!!!" onEnd={next} />
+        {/* <Swapper before="# Markdoc" after="Markdoc is" onEnd={next} />
         {state >= 1 && <Type text=" a " onEnd={next} />}
         {state >= 2 && (
           <Swapper before="{% type %}" after="powerful," onEnd={next} />
@@ -117,7 +118,7 @@ export function Typewriter() {
               onEnd={setDone}
             />
           </>
-        )}
+        )} */}
         <span className="cursor-container">
           <div className="cursor" />
         </span>
@@ -129,7 +130,7 @@ export function Typewriter() {
           }
           h1 {
             // Prevent page jump
-            height: calc(var(--line-height-jumbo) * 3);
+            height: calc(var(--line-height-jumbo));
             overflow: hidden;
           }
           .cursor-container {
