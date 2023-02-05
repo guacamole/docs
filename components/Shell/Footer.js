@@ -112,7 +112,7 @@ export function Footer({ children: links, landing }) {
           </span>
         ))}
         <span className="try-link">
-          <Link href="/sandbox">Try Markdoc</Link>
+          <Link href="https://openregistry.dev">Try OpenRegistry</Link>
         </span>
       </h3>
       <hr />
@@ -182,7 +182,6 @@ export function Footer({ children: links, landing }) {
       <footer className="desktop">
         {fancyLinks}
         <div className="flex">
-          <div className="left gap">{copyright}</div>
           <div className="right gap">
             {disclaimer}
             {toggle}

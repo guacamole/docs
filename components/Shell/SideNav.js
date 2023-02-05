@@ -6,47 +6,87 @@ const items = [
   {
     title: 'Get started',
     links: [
-      { href: '/docs/overview', children: 'What is Markdoc?' },
-      { href: '/docs/getting-started', children: 'Installation' },
-      { href: '/docs/faq', children: 'FAQ' },
-      { href: '/sandbox', children: 'Try it out' }
-    ]
-  },
-  {
-    title: 'Core concepts',
-    links: [
-      { href: '/docs/syntax', children: 'Syntax and schema' },
-      { href: '/docs/nodes', children: 'Nodes' },
-      { href: '/docs/tags', children: 'Tags' },
-      { href: '/docs/attributes', children: 'Attributes' },
-      { href: '/docs/variables', children: 'Variables' },
-      { href: '/docs/functions', children: 'Functions' },
+      { href: '/docs/getting-started#sign-up', children: 'Sign-up/ Sign-in' },
       {
-        href: '/docs/render',
-        children: 'Rendering'
+        href: '/docs/getting-started#using-docker-cli:',
+        children: 'Using Docker CLI'
       },
       {
-        href: '/docs/config',
-        children: 'Config objects'
+        href: '/docs/getting-started#push-an-image',
+        children: 'Push an Image'
       },
-      { href: '/docs/validation', children: 'Validation' }
+      {
+        href: '/docs/getting-started#pull-an-image',
+        children: 'Pull an Image'
+      },
+      { href: '/docs/faq', children: 'FAQ' }
+    ]
+  },
+
+  {
+    title: 'Containers',
+    links: [
+      {
+        href: '/docs/containers#what-are-containers-',
+        children: 'What are containers'
+      },
+      {
+        href: '/docs/containers#why-containers-and-how-do-they-work-',
+        children: 'Why do we need containers'
+      },
+      {
+        href: '/docs/containers#what-is-a-container-registry-',
+        children: 'Container Registries'
+      }
     ]
   },
   {
-    title: 'Integration guides',
+    title: 'Zines',
     links: [
-      { href: '/docs/examples', children: 'Common examples' },
-      { href: '/docs/examples/html', children: 'Using with HTML' },
-      { href: '/docs/nextjs', children: 'Using with Next.js' },
-      { href: '/docs/examples/react', children: 'Using with React' }
+      {
+        href: '/docs/zines#understanding-containers',
+        children: 'Understanding Containers'
+      },
+      {
+        href: '/docs/zines#what-is-openregistry',
+        children: 'What is OpenRegistry?'
+      },
+      {
+        href: '/docs/zines#how-does-openregistry-work',
+        children: 'How does it work?'
+      },
+      {
+        href: '/docs/zines#why-do-we-need-another-container-registry',
+        children: 'Why do we need this?'
+      },
+      // {
+      //   href: '/docs/zines#why-do-we-need-another-container-registry',
+      //   children: 'Pull a layer (Advance)'
+      // },
+      // {
+      //   href: '/docs/zines#why-do-we-need-another-container-registry',
+      //   children: 'Push a layer (Advance)'
+      // }
     ]
   },
   {
-    title: 'Advanced concepts',
+    title: 'Collaborations',
     links: [
-      { href: '/docs/frontmatter', children: 'Frontmatter' },
-      { href: '/docs/partials', children: 'Partials' }
+      { href: '/docs/collaboration', children: 'Akash Network' },
+      { href: '/docs/collaboration', children: 'Inter Planetory File system' },
+      { href: '/docs/collaboration', children: 'Storj' },
+      { href: '/docs/collaboration', children: 'Filebase' },
+      { href: '/docs/collaboration', children: 'iExec' }
     ]
+  },
+
+  {
+    title: 'Change log',
+    links: [{ href: '/docs/examples', children: 'Progress so far' }]
+  },
+  {
+    title: 'Contact',
+    links: [{ href: '/docs/contact', children: 'Contact us' }]
   }
 ];
 
@@ -103,7 +143,10 @@ export function SideNav() {
           }
           li a:hover,
           li.active > a {
-            text-decoration: underline;
+            border-radius: 3px;
+            border: 1px solid var(--dark);
+            padding: 4px 8px 4px 8px;
+            background: var(--purple);
           }
           @media screen and (max-width: 600px) {
             nav {

@@ -45,7 +45,7 @@
 :root,
 .light {
   --white: #ffffff;
-  --black: #18181b;
+  --black: #2f2f3d;
   --black-light: #58585f;
   --black-medium: #2c2c30;
   --gray-light: #f6f9fc;
@@ -56,13 +56,24 @@
   --green: #0a993e;
   --blue: #0073e6;
   --magenta: #dc34dc;
+  --primary50: #EEEDFF;
+  --primary100: #C2C9FD;
+  --primary200: #A3AEFD;
+  --primary300: #7373FF;
+  --primary400:#6363F1;
+  --primary500:#4848BC;
+  --primary600:#2F2F7D;
+  --primary700:#030527;
+  --primary800:#4e4e6e;
 
-  --theme: var(--yellow);
+  --theme: var(--primary100);
   --stripe: #0a2540;
 
   --light: var(--white);
   --dark: var(--black);
   --text: var(--dark);
+  --purple: #C2C9FD;
+  --pale: #fde9c2;
 
   --contrast-dark: var(--dark);
   --code-background: var(--gray-light);
@@ -96,7 +107,8 @@
   --dark: var(--white);
   --text: var(--dark);
 
-  --purple: var(--yellow); /* Change purple to yellow in dark mode */
+  --purple: var(--primary800); /* Change purple to yellow in dark mode */
+  --pale: var(--black-light);
   --green: #00d924;
   --blue: #80e9ff;
   --magenta: #ff80ff;
@@ -501,6 +513,7 @@ main .CodeMirror-linenumber {
 main .CodeMirror-cursor {
   border-color: var(--theme);
 }
+
 
 /* https://discourse.webflow.com/t/hide-overflow-scroll-bar/195259/5?utm_source=google&utm_medium=search&utm_campaign=general-paid-workhorse&utm_term=keyword-targeting&utm_content=dynamic-search-ads-t1&gclid=CjwKCAjwu_mSBhAYEiwA5BBmf7fOfY_lM89BGr3aT67riZ1XrK7uHxBpH5vDwiyJg9rVeu5EwXQiCRoC7VYQAvD_BwE */
 main .CodeMirror-scroll {
