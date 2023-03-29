@@ -299,6 +299,7 @@ export default function MyApp(props) {
           .page--landing .zines {
             background: var(--purple) ;
             border: 3px solid #000000;
+            color: var(--black)
           }
 
           .page--landing .img {

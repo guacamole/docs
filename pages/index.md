@@ -16,7 +16,7 @@ title: A decentralised and open source container registry
 {% section .zines %}
 {% side-by-side .hero %}
 
-{% item %}
+{% item .stay-light %}
 
 ### Hello there!{% .jumbo %}
 
