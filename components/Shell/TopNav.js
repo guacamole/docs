@@ -20,12 +20,8 @@ export function TopNav({ children }) {
     <div className="nav-bar">
       <nav>
         <div className="flex top-row ">
-          {/* <a className="logo" href="/">
-            <img src="/logo.png" width="40px" alt="openregistry logo" />
-            <img src="/black.png" width="80px" alt="openregistry logo"/>
-          </a> */}
-          <div className="logo1">
-          </div>
+          <a href='/' className="logo" alt="openregistry-logo"/>
+         
           <button
             className="hamburger"
             onClick={() => setShowMobileNav((o) => !o)}
@@ -50,18 +46,15 @@ export function TopNav({ children }) {
       </nav>
       <style jsx>
         {`
-          .logo1 {
+          .logo {
             height:50px;
             width: 170px;
             background-image: var(--logo);
             background-size: 100% ;
             background-repeat: no-repeat;
+            cursor: pointer;
           }
-          .logo {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-          }
+          
           .nav-bar {
             top: 0;
             position: fixed;
