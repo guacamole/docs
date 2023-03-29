@@ -15,14 +15,17 @@ function Search() {
 
 export function TopNav({ children }) {
   const [showMobileNav, setShowMobileNav] = React.useState(false);
+  
   return (
     <div className="nav-bar">
       <nav>
-        <div className="flex top-row">
-          <a className="logo" href="/">
+        <div className="flex top-row ">
+          {/* <a className="logo" href="/">
             <img src="/logo.png" width="40px" alt="openregistry logo" />
-            <img src="/docs-dark.png" width="70px" alt="openregistry logo" />
-          </a>
+            <img src="/black.png" width="80px" alt="openregistry logo"/>
+          </a> */}
+          <div className="logo1">
+          </div>
           <button
             className="hamburger"
             onClick={() => setShowMobileNav((o) => !o)}
@@ -47,10 +50,17 @@ export function TopNav({ children }) {
       </nav>
       <style jsx>
         {`
+          .logo1 {
+            height:50px;
+            width: 170px;
+            background-image: var(--logo);
+            background-size: 100% ;
+            background-repeat: no-repeat;
+          }
           .logo {
             display: flex;
             align-items: center;
-            gap: 4px;
+            gap: 6px;
           }
           .nav-bar {
             top: 0;
