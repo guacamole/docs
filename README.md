@@ -1,28 +1,26 @@
-# Markdoc docs
+---
+lang: en-US
+title: Home
+description: Landing page
+---
 
-[Markdoc](https://markdoc.dev) is a [Markdown](https://commonmark.org)-based syntax and toolchain for creating custom documentation sites and experiences.
-We designed Markdoc to power [Stripe's public docs](http://stripe.com/docs), our largest and most complex content site.
+# Open Registry
 
-## Contributing
+## About - OpenRegistry
 
-Contributions and feedback are welcomed and encouraged. Feel free to open PRs here, or open issues in the [Markdoc core repo](https://github.com/markdoc/markdoc).
+We are a small team of developers working towards decentralizing the container experience.
+OpenRegistry is open source and aims on remaining so forever. Checkout [what are containers](https://github.com/guacamole/docs/blob/main/pages/docs/containers.md) for extensive guide and journey of a container.
+The idea of decentralization is what drives us.<br>
+We're motivated to take on centralized services and making them decentralized. OpenRegistry is our initiative/ first step towards achieving that goal.
+We are committed to bring the change and make this product for people by people.
 
-## Installation
 
-1. [Fork](https://help.github.com/articles/fork-a-repo) and [clone](https://help.github.com/articles/cloning-a-repository) this repository to your local environment.
 
-2. Create a new branch with `git checkout -b <BRANCH_NAME>`
+## Why yet another Container Registry?
 
-3. Install the dependencies by running `npm install`
+OpenRegistry is an Open Source and Decentralized Container Registry but you've heard it already. What's different about us?
+Let's first understand how we operate:
+* We use Akash for compute which is a decentralized cloud provider offering their services for a very affordable price
+* Secondly we use IPFS/Storj as our storage layer which again is a part of Decentralized internet movement and offers services for a very reasonable price.
 
-4. Start the development server on [http://localhost:3000](http://localhost:3000) by running `npm run dev`
-
-5. Try editing `pages/index.md`
-
-## Code of conduct
-
-This project has adopted the Stripe [Code of conduct](https://github.com/markdoc/markdoc/blob/main/.github/CODE_OF_CONDUCT.md).
-
-## License
-
-This project uses the [MIT license](LICENSE).
+With OpenRegistry, we want to promote and build around such ecosystems to help provide best of the services to Developers without having to worry about rate limiting, changing their developer workflow or paying too much. We are trying to build a model which when reaches it's goal will make it almost free to use OpenRegistry forever. Simply put, the price is inversely proportional to the number of users we get.<br>
